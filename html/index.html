@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Profile</title>
+
+    <!-- <<=== start css ===>> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        
+        .box {
+            background-color: brown;
+            border: 2px solid greenyellow;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            color: #fff;
+            position: relative;            
+           transition: all .4s ease-in-out;
+           cursor: pointer;
+           box-shadow: 0px 0px 30px 0px#000;
+           margin: 0 40px;
+        }
+
+        .box:hover {
+           transform: rotate(720deg);
+           /* transform: scale(); */
+           /* transform: translateY(-50px); */
+           box-shadow: 0px 0px 45px 0px#000;
+        }
+
+        .box img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: all .4s ease-in-out;
+            width: 70%;
+            height: 70%;
+        }
+
+        .box:hover img {
+            opacity: .7;
+            width: 75%;
+            height: 75%;            
+            box-shadow: 0px 0px 15px 3px #333;
+        }
+
+        .box p {
+            position: absolute;
+            top: 55%;
+            left: 20%;
+            color: #fff;
+            font-size: 17px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .4s linear;
+            margin-top: 5px;
+            line-height: 15px;
+        }
+
+        .box:hover p {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .box h2 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .4s linear;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 3px solid greenyellow;
+            padding-bottom: 5px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .box:hover h2 {           
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
+
+        
+     /* <<== Start responsive css ==>> */
+
+     @media only screen and (min-width : 200px) and (max-width : 991px) {
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 0 20px;
+        }
+
+        .box img {
+            width: 50%;
+            height: 50%;
+        } 
+
+        .box:hover h2 {
+            top: 38%;
+            /* font-size: 14px; */
+        }
+
+        .box p {
+            top: 44%;
+            left: 13%;
+            font-size: 12px;
+          }
+     }
+
+     @media only screen and (min-width : 200px) and (max-width : 800px) {
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 40px 0;
+        }
+
+        .box p {
+            top: 45%;
+            left: 0%;
+            font-size: 17px;
+            margin-top: 5px;
+            line-height: 15px;
+            text-align: center;
+        }
+
+        .box h2 {
+            top: 0%;
+            left: 50%;
+            font-size: 22px;
+        }
+
+     }
+
+     /* <<== End responsive css ==>> */
+
+        
+    </style>
+     <!-- <<=== end css ===>> -->
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img src="pranto-img.png" alt="">
+            <h2>--This Is a Box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, totam.</p>
+        </div>
+        <div class="box">
+            <img src="pranto-img.png" alt="">
+            <h2>--This Is a Box</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, totam.</p>
+        </div>
+        <div class="box">
+            <img src="pranto-img.png" alt="">
+            <h2>--This Is a Box</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, totam.</p>
+        </div>
+        <div class="box">
+            <img src="pranto-img.png" alt="">
+            <h2>--This Is a Box</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, totam.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
